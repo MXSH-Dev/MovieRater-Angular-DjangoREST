@@ -61,6 +61,7 @@ export class MainComponent implements OnInit {
   updateMovieListAfterCreate($event) {
     console.log('main: ', $event);
     this.movies.push($event);
+    this.editedMovie = null;
   }
 
   updateMovieListAfterUpdate($event) {
@@ -74,5 +75,7 @@ export class MainComponent implements OnInit {
     if (index >= 0) {
       this.movies[index] = $event;
     }
+
+    this.editedMovie = null;
   }
 }
