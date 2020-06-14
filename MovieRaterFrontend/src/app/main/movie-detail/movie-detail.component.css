@@ -1,0 +1,23 @@
+.star-orange {
+  color: orange;
+}
+
+.star-gold {
+  color: gold;
+}
+
+#rate-container {
+  border-top: 2px solid orange;
+}
+
+#rate-container fa-icon {
+  cursor: pointer;
+  /* size: 2em; */
+  font-size: 1.3em;
+}
+
+#rate-container fa-icon:hover {
+  cursor: pointer;
+  /* size: 2em; */
+  font-size: 1.5em;
+}

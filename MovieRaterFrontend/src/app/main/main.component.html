@@ -1,0 +1,23 @@
+<div class="layout">
+  <app-movie-list
+    [movies]="movies"
+    (selectedMovieEmitter)="selectMovie($event)"
+    (editedMovieEmitter)="editMovie($event)"
+    (createNewMovieEmitter)="createNewMovie()"
+    (deleteMovieEmitter)="deleteMovie($event)"
+  ></app-movie-list>
+  <div>
+    <app-movie-detail
+      [movie]="selectedMovie"
+      (updateMovieEmitter)="selectMovie($event)"
+    ></app-movie-detail>
+    <app-movie-form
+      *ngIf="editedMovie"
+      [movie]="editedMovie"
+      (movieCreatedEmitter)="updateMovieListAfterCreate($event)"
+      (movieUpdatedEmitter)="updateMovieListAfterUpdate($event)"
+    ></app-movie-form>
+  </div>
+</div>
+
+<!-- {{ selectedMovie | json }} -->

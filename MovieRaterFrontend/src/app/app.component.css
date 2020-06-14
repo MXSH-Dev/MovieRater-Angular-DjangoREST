@@ -1,0 +1,12 @@
+.app {
+  background: #282c34;
+  color: white;
+  height: calc(100vh-100px);
+  /* height: fit-content; */
+  padding: 50px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
