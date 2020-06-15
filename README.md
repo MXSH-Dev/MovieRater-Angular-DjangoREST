@@ -1,5 +1,21 @@
 # MovieRater-Angular_DjangoREST
 
+### Frontend:
+
+- Install node packages:
+  ```
+  cd MovieRaterFrontend
+  npm install
+  ```
+
+- Run Angular Development Server:
+  ```
+  ng serve
+  ```
+---
+
+### Backend:
+
 - Create Virtual Environment:
     ```
     python3 -m venv .env
@@ -14,6 +30,19 @@
     ```
     pip install -r requirements.txt
     ```
+
+- Run Development Server:
+    ```
+    python3 MovieRaterBackend/manage.py runserver 0.0.0.0:8000
+    ```
+    
+- Create New APP:
+    ```
+    cd MovieRaterBackend
+    django-admin startapp <APP Name>
+    ```
+
+#### Things to add to in backend server:
 
 - Add to `INSTALLED_APPS`:
     ```python
@@ -58,14 +87,4 @@
         'POST',
         'PUT',
     ]
-    ```
-- Run Development Server:
-    ```
-    python3 MovieRaterBackend/manage.py runserver 0.0.0.0:8000
-    ```
-    
-- Create New APP:
-    ```
-    cd MovieRaterBackend
-    django-admin startapp <APP Name>
     ```
