@@ -52,7 +52,7 @@
     'rest_framework.authtoken',
     'corsheaders'
     'API',
-]
+    ]
     ```
 
 - Add to `MIDDLEWARE`:
@@ -60,7 +60,7 @@
     INSTALLED_APPS = [
     ...
     'corsheaders.middleware.CorsMiddleware',
-]
+    ]
     ```
 
 - Add to `settings.py`:
