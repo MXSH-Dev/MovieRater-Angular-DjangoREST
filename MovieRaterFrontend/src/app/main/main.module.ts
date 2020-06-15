@@ -7,6 +7,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieFormComponent } from './movie-form/movie-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [CommonModule, FontAwesomeModule, FormsModule, ReactiveFormsModule],
 
-  providers: [ApiService],
+  providers: [ApiService, CookieService],
 })
 export class MainModule {}

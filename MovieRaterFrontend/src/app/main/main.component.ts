@@ -1,6 +1,9 @@
 import { Movie } from './../models/movie';
 import { ApiService } from './../services/api.service';
 import { Component, OnInit } from '@angular/core';
+// import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -8,13 +11,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
+  // faFilm = faFilm;
   public movies: any = [];
   public selectedMovie: any = null;
   public editedMovie: any = null;
-  constructor(private apiService: ApiService) {}
+  constructor(
+    private apiService: ApiService,
+    private cookieService: CookieService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.getMovies();
+    const authTokenExist: boolean = this.cookieService.check('authToken');
+    if (!authTokenExist) {
+      this.router.navigate(['/auth']);
+    } else {
+      this.getMovies();
+    }
   }
 
   getMovies() {
@@ -77,5 +90,10 @@ export class MainComponent implements OnInit {
     }
 
     this.editedMovie = null;
+  }
+
+  logout() {
+    this.cookieService.delete('authToken');
+    this.router.navigate(['/auth']);
   }
 }

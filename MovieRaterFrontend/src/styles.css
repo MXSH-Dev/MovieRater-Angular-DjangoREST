@@ -5,3 +5,23 @@ body {
   padding: 0;
   background-color: #282c34;
 }
+
+button {
+  columns: #444444;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+input,
+textarea {
+  width: 100%;
+  font-size: 0.8em;
+  margin: 8px 0;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}

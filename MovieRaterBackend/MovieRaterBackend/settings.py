@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 REST_FRAMEWORK = {
     # must use brackets (tuple) or square brackets (list) here, not curly brackets (set)
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
+        # 'rest_framework.permissions.IsAuthenticated',
     )
 }
 

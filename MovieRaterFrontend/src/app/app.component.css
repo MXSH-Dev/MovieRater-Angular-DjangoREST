@@ -9,4 +9,12 @@
 
 h1 {
   text-align: center;
+  color: gold;
+  font-size: 3em;
+}
+
+h1 fa-icon {
+  color: orange;
+  display: inline-block;
+  transform: rotate(15deg);
 }
